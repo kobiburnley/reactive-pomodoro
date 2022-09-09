@@ -3,19 +3,19 @@
   "version": "1.0.0",
   "description": "setup to play around with rxjs",
   "private": true,
+  "workspaces": {
+    "packages": [
+      "external_libs/isbt/packages/*",
+      "packages/*"
+    ]
+  },
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server --mode development"
+    "build": "isbt build && yarn workspace @rxjs-playground/ui build",
+    "start": "yarn workspace @rxjs-playground/ui start:react"
   },
   "author": "netta bondy",
   "license": "ISC",
-  "dependencies": {
-    "eslint": "^5.13.0",
-    "rxjs": "^6.2.2",
-    "webpack": "^4.16.3"
-  },
   "devDependencies": {
-    "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.1.14"
+    "@isbt/core": "^1.18.0"
   }
 }

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "references": [
+    {
+      "path": "packages/ui/tsconfig.esm.json"
+    },
+    {
+      "path": "packages/ui/tsconfig.cjs.json"
+    }
+  ],
+  "extends": "@isbt/core/tsconfig.base.json",
+  "exclude": [
+    "node_modules",
+    "external_libs/isbt/packages/*",
+    "packages/*"
+  ]
+}
